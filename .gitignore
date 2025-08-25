@@ -1,0 +1,46 @@
+# Node / Hardhat
+node_modules/
+artifacts/
+cache/
+coverage/
+typechain/
+dist/
+.out/
+
+# Env & keys
+.env
+*.secret
+*.key
+
+# OS/editor
+.DS_Store
+Thumbs.db
+
+# OpenZeppelin manifest (local)
+.openzeppelin/
+
+# Local build/IDE noise
+build/
+ignition/
+
+# --- Keep-only rules for MI6 repo ---
+contracts/*
+!contracts/MI6Coin.sol
+
+test/*
+!test/MI6Coin.test.js
+
+scripts/*
+!scripts/depMI6Multi.js
+
+/*.html
+!/indexMI6Sepolia.html
+
+OldSol/
+py3/
+py3coin/
+mi6coin/
+npm/
+coverage.json
+commands.txt
+INTERVAL=60
