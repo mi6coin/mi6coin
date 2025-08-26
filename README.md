@@ -1,5 +1,9 @@
 # MI6Coin
 
+<p align="center">
+  <img src="logo/mi6-256.png" width="128" height="128" alt="MI6 Coin logo">
+</p>
+
 Non-upgradeable ERC20 with scheduled emissions (10% of current supply) minted to a treasury address.  
 Owner controls `mintInterval` (seconds) and can **only raise** the minimum floor via `setMintInterval(newInterval)`.  
 `setMintInterval(newInterval)` must satisfy:
