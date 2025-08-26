@@ -122,10 +122,32 @@ test/MI6Coin.test.js
 README.md
 ```
 
+---
+
 ## Explorer & Live Demo
 
 - **Etherscan (Mainnet)**: https://etherscan.io/address/0x75e877014603784eD7B6da4C544147724372f9b2#code
 - **Etherscan (Sepolia)**: https://sepolia.etherscan.io/address/0xfa2C7a06C30b2B515Fc59D9FD353612C5250648b#code
 - **Live test UI (GitHub Pages)**: https://mi6coin.github.io/mi6coin/indexMI6Sepolia.html
   - If the page isn’t live yet, enable Pages: **Settings → Pages → Build and deployment → Deploy from a branch → Branch: `main` → Folder: `/ (root)` → Save**.
+
+---
+
+## Contract spec
+
+**Compiler:** 0.8.28  
+**Optimizer:** enabled (runs: 200)  
+**Decimals:** 18
+
+### Ethereum Mainnet
+- Address: `0x75e877014603784eD7B6da4C544147724372f9b2`
+- Creation TX: `0x6b9b8a2c80b1c27957564d659136b6c9494db07af82f6cbd88c08c97bb9c51b4`
+- **codehash:** `0x3f0b989f19e46d85bef637a925d3d3d18c371122bb3921e4382e5eebde724219`
+- **abi.sha256:** `a67f2cfa329a774a9fe0091585bd1c559e3acae837345d03dc66cbaae03af838`
+
+### Sepolia
+- Address: `0xfa2C7a06C30b2B515Fc59D9FD353612C5250648b`
+- Creation TX: `0x1c8788b135423feb0bf8e1217da4ea2661a52a34296b67dee542dd9bae5fca0a`
+- **codehash:** `0xa36475c1c28e4fa9cd3a199baca1691d6a5e983eee588d8d142e85c9e1ca3843`
+- **abi.sha256:** `a67f2cfa329a774a9fe0091585bd1c559e3acae837345d03dc66cbaae03af838`
 
