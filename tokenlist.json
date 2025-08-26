@@ -1,0 +1,28 @@
+{
+  "name": "MI6 Token List",
+  "logoURI": "https://raw.githubusercontent.com/mi6coin/mi6coin/main/logo/mi6-256.png",
+  "timestamp": "2025-08-25T00:00:00+00:00",
+  "version": { "major": 1, "minor": 0, "patch": 0 },
+  "tokens": [
+    {
+      "chainId": 1,
+      "address": "0x75e877014603784eD7B6da4C544147724372f9b2",
+      "name": "MI6 Coin",
+      "symbol": "MI6",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/mi6coin/mi6coin/main/logo/mi6-256.png",
+      "extensions": {
+        "website": "https://github.com/mi6coin/mi6coin"
+      }
+    },
+    {
+      "chainId": 11155111,
+      "address": "0xfa2C7a06C30b2B515Fc59D9FD353612C5250648b",
+      "name": "MI6 Coin",
+      "symbol": "MI6",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/mi6coin/mi6coin/main/logo/mi6-256.png"
+    }
+  ]
+}
+
