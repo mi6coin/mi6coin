@@ -44,3 +44,12 @@ npm/
 coverage.json
 commands.txt
 INTERVAL=60
+
+# Design sources
+*.psd
+
+# macOS noise
+.localized
+
+# Local scratch files
+*.patch
