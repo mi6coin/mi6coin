@@ -48,7 +48,7 @@ npm run fp:bsc
 
 > `codehash` can differ across networks due to metadata; `abi.sha256` is identical.
 
-- Ethereal Mainnet \
+- Ethereum Mainnet \
 Address: `0x75e877014603784eD7B6da4C544147724372f9b2` (verified) \
 `codehash`: `0x3f0b989f19e46d85bef637a925d3d3d18c371122bb3921e4382e5eebde724219` \
 `abi.sha256`: `0xa67f2cfa329a774a9fe0091585bd1c559e3acae837345d03dc66cbaae03af838`
@@ -69,7 +69,8 @@ Address: `0x3B38DD55c72CFA23A8e269b205f92316CaCD6A3e` (verified) \
 `abi.sha256`: `0xa67f2cfa329a774a9fe0091585bd1c559e3acae837345d03dc66cbaae03af838`
 
 ### Environment example
-```# Multichain Etherscan V2 key (ETH/Arbitrum/BSC/etc)
+```env
+# Multichain Etherscan V2 key (ETH/Arbitrum/BSC/etc)
 ETHERSCAN_API_KEY=your_multichain_key
 
 # RPC endpoints
