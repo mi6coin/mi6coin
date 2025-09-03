@@ -18,7 +18,8 @@ Owner can `finalizeMinting()` (one-way) and `burnFromTreasury(amount)`.
 
 - **Ethereum Mainnet**: `0x75e877014603784eD7B6da4C544147724372f9b2` (verified)
 - **Sepolia**: `0xfa2C7a06C30b2B515Fc59D9FD353612C5250648b` (verified)
-
+- **Arbitrum One**: `0x7942c79584CFbD056A9056A5D2B459693E679871` (verified)
+- **BNB Chain (BSC)**: `0x3B38DD55c72CFA23A8e269b205f92316CaCD6A3e' (verified)
 > If you redeploy, update these values here.
 
 ---
@@ -132,6 +133,8 @@ README.md
 
 - **Etherscan (Mainnet)**: https://etherscan.io/address/0x75e877014603784eD7B6da4C544147724372f9b2#code
 - **Etherscan (Sepolia)**: https://sepolia.etherscan.io/address/0xfa2C7a06C30b2B515Fc59D9FD353612C5250648b#code
+- **Arbitrum One**: https://arbiscan.io/address/0x7942c79584CFbD056A9056A5D2B459693E679871#code
+- **BNB Chain (BSC)**: https://bscscan.com/address/0x3B38DD55c72CFA23A8e269b205f92316CaCD6A3e#code
 - **Live test UI (GitHub Pages)**: https://mi6coin.github.io/mi6coin/indexMI6Sepolia.html
   - If the page isn’t live yet, enable Pages: **Settings → Pages → Build and deployment → Deploy from a branch → Branch: `main` → Folder: `/ (root)` → Save**.
 
@@ -139,7 +142,7 @@ README.md
 
 ## Contract spec
 
-**Compiler:** 0.8.28  
+**Compiler:** 0.8.24  
 **Optimizer:** enabled (runs: 200)  
 **Decimals:** 18
 
@@ -147,11 +150,23 @@ README.md
 - Address: `0x75e877014603784eD7B6da4C544147724372f9b2`
 - Creation TX: `0x6b9b8a2c80b1c27957564d659136b6c9494db07af82f6cbd88c08c97bb9c51b4`
 - **codehash:** `0x3f0b989f19e46d85bef637a925d3d3d18c371122bb3921e4382e5eebde724219`
-- **abi.sha256:** `a67f2cfa329a774a9fe0091585bd1c559e3acae837345d03dc66cbaae03af838`
+- **abi.sha256:** `0xa67f2cfa329a774a9fe0091585bd1c559e3acae837345d03dc66cbaae03af838`
 
 ### Sepolia
 - Address: `0xfa2C7a06C30b2B515Fc59D9FD353612C5250648b`
 - Creation TX: `0x1c8788b135423feb0bf8e1217da4ea2661a52a34296b67dee542dd9bae5fca0a`
 - **codehash:** `0xa36475c1c28e4fa9cd3a199baca1691d6a5e983eee588d8d142e85c9e1ca3843`
-- **abi.sha256:** `a67f2cfa329a774a9fe0091585bd1c559e3acae837345d03dc66cbaae03af838`
+- **abi.sha256:** `0xa67f2cfa329a774a9fe0091585bd1c559e3acae837345d03dc66cbaae03af838`
+
+### Arbitrum One
+- Address: `0x7942c79584CFbD056A9056A5D2B459693E679871`
+- Creation TX: `0xebebc5eaa3d6bc1b35459c656f93590969c1b903a8f7c24191b9f77256028960`
+- **codehash:** `0xa36475c1c28e4fa9cd3a199baca1691d6a5e983eee588d8d142e85c9e1ca3843`
+- **abi.sha256:** `0xa67f2cfa329a774a9fe0091585bd1c559e3acae837345d03dc66cbaae03af838`
+
+### BNB Chain (BSC)
+- Address: `0x3B38DD55c72CFA23A8e269b205f92316CaCD6A3e`
+- Creation TX: `0x4352258ae012d8a351c6dcf20d931dab23b917d6cda07eabd0796ab920089be9`
+- **codehash:** `0x2da40f79df0ae0684676087f718326a85182756cebef00767c457789471a147c`
+- **abi.sha256:** `0xa67f2cfa329a774a9fe0091585bd1c559e3acae837345d03dc66cbaae03af838`
 

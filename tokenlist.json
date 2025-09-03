@@ -22,6 +22,22 @@
       "symbol": "MI6",
       "decimals": 18,
       "logoURI": "https://raw.githubusercontent.com/mi6coin/mi6coin/main/logo/mi6-256.png"
+    },
+    {
+      "chainId": 42161,
+      "address": "0x7942c79584CFbD056A9056A5D2B459693E679871",
+      "name": "MI6 Coin",
+      "symbol": "MI6",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/mi6coin/mi6coin/main/logo/mi6-256.png"
+    },
+    {
+      "chainId": 56,
+      "address": "0x3B38DD55c72CFA23A8e269b205f92316CaCD6A3e",
+      "name": "MI6 Coin",
+      "symbol": "MI6",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/mi6coin/mi6coin/main/logo/mi6-256.png"
     }
   ]
 }

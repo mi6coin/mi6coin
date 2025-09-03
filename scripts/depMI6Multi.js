@@ -49,7 +49,6 @@ async function makeProvider() {
   if (RPC_URL) {
     return new ethers.providers.JsonRpcProvider(RPC_URL);
   }
-  const NETWORK = process.env.NETWORK || "sepolia"; // mainnet|sepolia|holesky...
   const INFURA_KEY = process.env.INFURA_KEY;
   if (!INFURA_KEY) {
     throw new Error("Missing INFURA_KEY (or provide RPC_URL)");
@@ -72,7 +71,7 @@ async function main() {
   console.log("Ledger address:", ledgerAddress);
 
   // ===== Constructor params =====
-  const NAME = process.env.MI6_NAME || "MI6 Coin";
+  const NAME = process.env.MI6_NAME ?? "MI6 Coin";
   const SYMBOL = process.env.MI6_SYMBOL || "MI6";
   const TREASURY = process.env.MI6_TREASURY || ledgerAddress;
   const INITIAL_SUPPLY = process.env.MI6_INITIAL_SUPPLY
@@ -83,7 +82,7 @@ async function main() {
     : ethers.BigNumber.from("60");
 
   // ===== Load artifact =====
-  const SPEC = process.env.CONTRACT_PATH || "contracts/MI6Coin2.sol:MI6Coin";
+  const SPEC = process.env.CONTRACT_PATH || "contracts/MI6Coin.sol:MI6Coin";
   const { jsonPath, contract } = artifactFromSpecifier(SPEC);
   const artifact = JSON.parse(fs.readFileSync(jsonPath, "utf8"));
   const abi = artifact.abi;
@@ -169,7 +168,18 @@ async function main() {
   console.log("MintInterval (sec):", MINT_INTERVAL.toString());
 
   console.log("\nVerify example (adjust explorer/network):");
-  console.log(`npx hardhat verify --network ${process.env.NETWORK || "sepolia"} --contract ${SPEC} \\`);
+  // --- Detect network by RPC and compare with NETWORK_ENV ---
+  const NETWORK_ENV = process.env.NETWORK; // optional
+  const detected = await provider.getNetwork();
+  const id = detected.chainId;
+  const byId = { 1: "mainnet", 11155111: "sepolia", 42161: "arbitrumOne", 56: "bsc" };
+  const detectedName = byId[id] || `chain-${id}`;
+  if (NETWORK_ENV && NETWORK_ENV !== detectedName) {
+    throw new Error(`NETWORK=${NETWORK_ENV} не совпадает с RPC chainId=${id} (${detectedName}). Проверь RPC_URL/NETWORK.`);
+  }
+  const VERIFY_NET = NETWORK_ENV || detectedName;
+  console.log(`npx hardhat verify --network ${VERIFY_NET} --contract ${SPEC} \\`);
+  //console.log(`npx hardhat verify --network ${process.env.NETWORK || "sepolia"} --contract ${SPEC} \\`);
   console.log(`  ${receipt.contractAddress} "${NAME}" "${SYMBOL}" ${TREASURY} ${INITIAL_SUPPLY.toString()} ${MINT_INTERVAL.toString()}`);
 }
 
